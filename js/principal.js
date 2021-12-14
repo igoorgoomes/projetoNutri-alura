@@ -7,6 +7,7 @@ titulo.textContent = "Aparecida Nutricionista";
 // declarando as variáveis 
 var pacientes = document.querySelectorAll(".paciente");
 
+// criando uma estrutura de repetição para que a ação calcular imc passe por todos os pacientes
 for(var i = 0; i < pacientes.length;i++){
     var paciente = pacientes[i];
     console.log(paciente);
