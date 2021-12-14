@@ -27,11 +27,14 @@ for(var i = 0; i < pacientes.length;i++){
         tdImc.textContent = "Peso inválido!";
         // a variavel agora é falsa
         pesoValido = false;
+        // estilizando nossa validação
+        paciente.classList.add("paciente-invalido");
     }
 
     if (altura <= 0 || altura >= 3){
         tdImc.textContent = "Altura inválida!";
         alturaValida = false;
+        paciente.classList.add("paciente-invalido");
     }
 
     if (pesoValido && alturaValida){
