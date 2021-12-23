@@ -9,7 +9,6 @@ var pacientes = document.querySelectorAll(".paciente");
 // criando uma estrutura de repetição para que a ação calcular imc passe por todos os pacientes
 for(var i = 0; i < pacientes.length;i++){
     var paciente = pacientes[i];
-    console.log(paciente);
     var tdPeso = paciente.querySelector(".info-peso");
     var tdAltura = paciente.querySelector(".info-altura");
     // buscando o contéudo dentro das tags
@@ -45,5 +44,13 @@ for(var i = 0; i < pacientes.length;i++){
         tdImc.textContent = "Peso e/ou Altura estão inválidos!"
     }
 }
+
+var botaoCadastrar = document.querySelector("#cadastro-paciente");
+
+botaoCadastrar.addEventListener("click",function(event){
+    event.preventDefault();
+    console.log("Oi, cliquei no botão!");
+});
+
 
 
