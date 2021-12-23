@@ -49,7 +49,37 @@ var botaoCadastrar = document.querySelector("#cadastro-paciente");
 
 botaoCadastrar.addEventListener("click",function(event){
     event.preventDefault();
-    console.log("Oi, cliquei no botão!");
+    // declarando as variáveis form para indicar a inclusão de novos pacientes a tabela
+    var form = document.querySelector("#form-adiciona");
+
+    var nome = form.nome.value;
+    var peso = form.peso.value;
+    var altura = form.altura.value;
+    var gordura = form.gordura.value;
+    // para pegar os valores informados dentro dos inputs usamos o.value pra buscar esse valor
+
+    var CadPacienteTr = document.createElement("tr");
+
+    var CadnomeTr = document.createElement("td");
+    var CadpesoTr = document.createElement("td");
+    var CadAlturaTr = document.createElement("td");
+    var CadGorduraTr = document.createElement("td");
+    var CadImcTr = document.createElement("td");
+
+    CadnomeTr.textContent = nome;
+    CadpesoTr.textContent = peso;
+    CadAlturaTr.textContent = altura;
+    CadGorduraTr.textContent = gordura;
+
+    CadPacienteTr.appendChild(CadnomeTr);
+    CadPacienteTr.appendChild(CadpesoTr);
+    CadPacienteTr.appendChild(CadAlturaTr);
+    CadPacienteTr.appendChild(CadGorduraTr);
+
+    var tabela = document.querySelector("#tabela-pacientes");
+
+    tabela.appendChild(CadPacienteTr);
+    
 });
 
 
