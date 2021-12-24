@@ -40,6 +40,7 @@ for(var i = 0; i < pacientes.length;i++){
     }
 }
 
+// incluindo no formulario
 var botaoCadastrar = document.querySelector("#cadastro-paciente");
 
 botaoCadastrar.addEventListener("click",function(event){
