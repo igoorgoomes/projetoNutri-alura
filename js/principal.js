@@ -1,8 +1,3 @@
-
-var titulo = document.querySelector(".titulo");
-
-titulo.textContent = "Aparecida Nutricionista";
-
 // declarando as variáveis 
 var pacientes = document.querySelectorAll(".paciente");
 
