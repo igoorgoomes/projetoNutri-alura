@@ -56,21 +56,21 @@ botaoCadastrar.addEventListener("click",function(event){
 
     var CadPacienteTr = document.createElement("tr");
 
-    var CadnomeTr = document.createElement("td");
-    var CadpesoTr = document.createElement("td");
-    var CadAlturaTr = document.createElement("td");
-    var CadGorduraTr = document.createElement("td");
-    var CadImcTr = document.createElement("td");
+    var CadnomeTd = document.createElement("td");
+    var CadpesoTd = document.createElement("td");
+    var CadAlturaTd = document.createElement("td");
+    var CadGorduraTd = document.createElement("td");
+    var CadImcTd = document.createElement("td");
 
-    CadnomeTr.textContent = nome;
-    CadpesoTr.textContent = peso;
-    CadAlturaTr.textContent = altura;
-    CadGorduraTr.textContent = gordura;
+    CadnomeTd.textContent = nome;
+    CadpesoTd.textContent = peso;
+    CadAlturaTd.textContent = altura;
+    CadGorduraTd.textContent = gordura;
 
-    CadPacienteTr.appendChild(CadnomeTr);
-    CadPacienteTr.appendChild(CadpesoTr);
-    CadPacienteTr.appendChild(CadAlturaTr);
-    CadPacienteTr.appendChild(CadGorduraTr);
+    CadPacienteTr.appendChild(CadnomeTd);
+    CadPacienteTr.appendChild(CadpesoTd);
+    CadPacienteTr.appendChild(CadAlturaTd);
+    CadPacienteTr.appendChild(CadGorduraTd);
 
     var tabela = document.querySelector("#tabela-pacientes");
 
