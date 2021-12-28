@@ -10,6 +10,7 @@ botaoCadastrar.addEventListener("click",function(event){
     var peso = form.peso.value;
     var altura = form.altura.value;
     var gordura = form.gordura.value;
+   
     // para pegar os valores informados dentro dos inputs usamos o.value pra buscar esse valor
 
     var CadPacienteTr = document.createElement("tr");
@@ -24,12 +25,14 @@ botaoCadastrar.addEventListener("click",function(event){
     CadpesoTd.textContent = peso;
     CadAlturaTd.textContent = altura;
     CadGorduraTd.textContent = gordura;
+    CadImcTd.textContent = calculaImc(peso,altura);
     
 
     CadPacienteTr.appendChild(CadnomeTd);
     CadPacienteTr.appendChild(CadpesoTd);
     CadPacienteTr.appendChild(CadAlturaTd);
     CadPacienteTr.appendChild(CadGorduraTd);
+    CadPacienteTr.appendChild(CadImcTd);
 
     var tabela = document.querySelector("#tabela-pacientes");
 
