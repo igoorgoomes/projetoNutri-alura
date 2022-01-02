@@ -7,33 +7,14 @@ botaoCadastrar.addEventListener("click",function(event){
     var form = document.querySelector("#form-adiciona");
 
     var paciente = NovoPacienteForm(form);
-   
-    // para pegar os valores informados dentro dos inputs usamos o.value pra buscar esse valor
 
-    var CadPacienteTr = document.createElement("tr");
-
-    var CadnomeTd = document.createElement("td");
-    var CadpesoTd = document.createElement("td");
-    var CadAlturaTd = document.createElement("td");
-    var CadGorduraTd = document.createElement("td");
-    var CadImcTd = document.createElement("td");
-
-    CadnomeTd.textContent = nome;
-    CadpesoTd.textContent = peso;
-    CadAlturaTd.textContent = altura;
-    CadGorduraTd.textContent = gordura;
-    CadImcTd.textContent = calculaImc(peso,altura);
-    
-
-    CadPacienteTr.appendChild(CadnomeTd);
-    CadPacienteTr.appendChild(CadpesoTd);
-    CadPacienteTr.appendChild(CadAlturaTd);
-    CadPacienteTr.appendChild(CadGorduraTd);
-    CadPacienteTr.appendChild(CadImcTd);
+    var pacienteTr = criarTr(paciente);
 
     var tabela = document.querySelector("#tabela-pacientes");
 
-    tabela.appendChild(CadPacienteTr);
+    tabela.appendChild(pacienteTr);
+
+    form.reset();
     
 });
 
@@ -42,7 +23,7 @@ function NovoPacienteForm (form){
         nome:form.nome.value,
         peso:form.peso.value,
         altura:form.altura.value,
-        gordura:form.gordura.valuer,
+        gordura:form.gordura.value,
         imc:calculaImc(form.peso.value, form.altura.value)
     }
 
@@ -52,8 +33,22 @@ function NovoPacienteForm (form){
 function criarTd (dado, classe) {
 
     var td = document.createElement("td");
-    td.classList,add(classe);
+    td.classList.add(classe);
     td.textContent = dado;
 
     return td;
+}
+
+function criarTr (paciente){
+
+    var pacienteTr = document.createElement("tr");
+    pacienteTr.classList.add("paciente");
+
+    pacienteTr.appendChild(criarTd(paciente.nome, "info-nome"));
+    pacienteTr.appendChild(criarTd(paciente.peso, "info-peso"));
+    pacienteTr.appendChild(criarTd(paciente.altura, "info-altura"));
+    pacienteTr.appendChild(criarTd(paciente.gordura, "info-gordura"));
+    pacienteTr.appendChild(criarTd(paciente.imc, "info-imc"));
+    
+    return pacienteTr;
 }
