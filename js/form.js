@@ -6,10 +6,7 @@ botaoCadastrar.addEventListener("click",function(event){
     // declarando as variáveis form para indicar a inclusão de novos pacientes a tabela
     var form = document.querySelector("#form-adiciona");
 
-    var nome = form.nome.value;
-    var peso = form.peso.value;
-    var altura = form.altura.value;
-    var gordura = form.gordura.value;
+    var paciente = NovoPacienteForm(form);
    
     // para pegar os valores informados dentro dos inputs usamos o.value pra buscar esse valor
 
@@ -50,4 +47,13 @@ function NovoPacienteForm (form){
     }
 
     return paciente;
+}
+
+function criarTd (dado, classe) {
+
+    var td = document.createElement("td");
+    td.classList,add(classe);
+    td.textContent = dado;
+
+    return td;
 }
