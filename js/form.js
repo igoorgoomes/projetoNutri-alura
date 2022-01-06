@@ -19,6 +19,7 @@ botaoCadastrar.addEventListener("click",function(event){
     
 });
 
+// funçaõ para cadastro de novo paciente
 function NovoPacienteForm (form){
     var paciente = {
         nome:form.nome.value,
