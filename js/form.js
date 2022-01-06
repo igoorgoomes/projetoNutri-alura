@@ -10,6 +10,7 @@ botaoCadastrar.addEventListener("click",function(event){
 
     var pacienteTr = criarTr(paciente);
 
+    //adicionando paciente na tabela
     var tabela = document.querySelector("#tabela-pacientes");
 
     tabela.appendChild(pacienteTr);
