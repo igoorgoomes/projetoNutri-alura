@@ -53,4 +53,4 @@ function criarTr (paciente){
     pacienteTr.appendChild(criarTd(paciente.imc, "info-imc"));
     
     return pacienteTr;
-}
+}   
