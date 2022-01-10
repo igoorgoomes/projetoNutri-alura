@@ -54,3 +54,7 @@ function criarTr (paciente){
     
     return pacienteTr;
 }   
+
+function validaPaciente (paciente){
+    
+}
